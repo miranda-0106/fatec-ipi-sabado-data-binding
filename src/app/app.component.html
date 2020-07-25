@@ -1,0 +1,28 @@
+<div class="container">
+
+  <form>
+    <div class="form-group">
+      <label for="nomeInput">Nome</label>
+      <input #nomeInput type="text" class="form-control" id="nomeInput" placeholder="Digite um nome">
+    </div>
+  </form>
+
+  <label for="produtoInput">Produto</label>
+  <input #produtoInput type="text" class="form-control mb-3" id="produtoInput" [(ngModel)]="produto">
+
+
+  <button type="button" class="btn btn-primary btn-block"
+    (click)="alterarProduto(produtoInput.value)">Adicionar</button>
+
+  {{produto}}
+
+  <div class="alert alert-primary mt-3 p-3" [hidden]="!exibirCaixa">{{nome}}</div>
+</div>
+
+<br>
+<app-page-form></app-page-form>
+
+<!--
+<p>Oi, meu nome é {{nome}} e tenho {{idade}} anos.</p>
+<p>Lançando um dado: {{lancarDado()}}.</p>
+-->
